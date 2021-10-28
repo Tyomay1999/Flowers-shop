@@ -1,0 +1,45 @@
+@import '../../main';
+
+.main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+
+        .productPanel {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .toTop,.toTop1{
+        position: fixed;
+        height: 50px;
+        width: 50px;
+        right: 10px;
+        bottom: 45px;
+        border-radius: 100%;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $FONT;
+
+        & > svg{
+            color: whitesmoke;
+            font-size: 55px;
+        }
+        z-index: 2;
+    }
+    .toTop1{
+        background: #0EBEFF;
+    }
+}

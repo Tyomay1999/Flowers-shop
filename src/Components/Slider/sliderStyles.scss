@@ -1,0 +1,72 @@
+@import "../../main";
+
+.carousel {
+  .slick-dots {
+    bottom: -1.5vw;
+
+    li {
+      button {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 2px solid whitesmoke;
+        border-radius: 20px;
+        font-family: $FONT;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          content: "";
+          text-align: center;
+          font-family: $FONT;
+          opacity: .5;
+          color: black;
+          background: $contentDark;
+          transform: translate(-50%, -50%);
+          transition: all .3s ease-in-out;
+        }
+      }
+
+      &.slick-active, &:hover {
+        button {
+          border-color: $contentDark;
+          font-family: $FONT;
+          &:before {
+            background: $contentDark;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }  //slick-dots
+
+  .slick-prev, .slick-next {
+    width: 50px;
+    height: 50px;
+  }//.slick-prev,.slick-next
+
+  .slick-prev:focus, .slick-next:focus, .slick-prev:hover, .slick-next:hover {
+    color: whitesmoke;
+    outline: none;
+    //background: whitesmoke;
+  }
+
+  .slick-prev:before, .slick-next:before{
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 1;
+    opacity: .75;
+    color: $contentDark;
+  }
+
+  .slick-prev {
+    left: -55px;
+  }
+  .slick-next {
+    right: -55px;
+  }
+}

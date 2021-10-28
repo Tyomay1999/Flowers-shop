@@ -1,0 +1,282 @@
+@import '../../main';
+
+.main {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.219);
+  z-index: 2;
+
+  .container {
+    position: relative;
+    margin-top: 150px;
+    width: 70%;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 35px black;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    padding: 35px;
+
+    .wrapper {
+      width: 100%;
+      height: 300vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      & > h1 {
+        @include font(35px, 800, $contentDark);
+        margin-bottom: 40px;
+      }
+
+      .product {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+
+        .image, .description {
+          width: 49%;
+        }
+
+        .image {
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .description {
+          position: relative;
+
+          & > p {
+            @include font(25px, 600)
+          }
+
+          .lastPriceAndSale {
+            position: absolute;
+            right: 0;
+
+            & > h3 {
+              color: red;
+              text-align: right;
+
+              & > svg {
+                color: red;
+              }
+            }
+
+            & > h4 {
+              & > span {
+                text-decoration: line-through;
+              }
+            }
+          }
+
+          .price {
+            text-align: left;
+            margin-bottom: 20px;
+          }
+
+          .quantity {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+
+            .inputQuantity {
+              margin: 0 20px;
+              width: 100px;
+            }
+
+            .light, .dark {
+              width: 20px;
+              height: 20px;
+            }
+
+            .light {
+              &:hover {
+                color: $textColorLigth;
+                background: $contentColor;
+              }
+            }
+
+            .dark {
+              &:hover {
+                color: $textColorLigth;
+                background: $contentDark;
+              }
+            }
+
+          }
+
+        }
+
+        .morePhoto {
+          margin-top: 10px;
+          width: 100%;
+          min-height: 100px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          & > div {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 3px 3px 0;
+            cursor: pointer;
+            overflow: hidden;
+
+            & > img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            &:hover {
+              & > img {
+                transform: scale(1.4);
+                transition: transform 1.4s;
+              }
+
+              & > div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(222, 222, 222, 0.4);
+              }
+            }
+          }
+        }
+
+      }
+
+      .buttonsAndTags {
+        width: 100%;
+        min-height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tags {
+          width: 49%;
+          height: 100%;
+          display: flex;
+          padding: 10px 0;
+          flex-wrap: wrap;
+
+          & > div {
+            cursor: pointer;
+            min-width: 50px;
+            height: 27px;
+            display: flex;
+            margin-right: 5px;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 10px 2px 10px;
+            border-radius: 5px;
+            background: #c3c3c3;
+
+            &:hover {
+              background: $contentColor;
+              transition: background 0.5s;
+
+              & > span {
+                color: $textColorLigth;
+              }
+            }
+
+            & > span {
+              color: $textColorLigth;
+            }
+          }
+        }
+
+        .buttons {
+          padding: 20px;
+          width: 49%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+
+          .buyDark, .buyLight {
+            background: $contentDark;
+            text-shadow: 2px 2px 2px black;
+            &:hover {
+              color: $textColorLigth;
+              background: $contentColor;
+            }
+          }
+
+          .buyLight {
+            background: $contentColor;
+
+            &:hover {
+              color: $textColorLigth;
+              background: $contentDark;
+            }
+          }
+        }
+      }
+
+      .similar {
+        margin-top: 20px;
+        width: 100%;
+
+        & > .titleLight, .titleDark {
+          color: $contentColor;
+
+          & > svg {
+            color: $contentColor;
+            font-size: 30px;
+            font-family: $FONT;
+          }
+        }
+
+        & > .titleDark {
+          color: $contentDark;
+
+          & > svg {
+            color: $contentDark;
+            font-size: 30px;
+            font-family: $FONT;
+          }
+        }
+
+        .similarBlok {
+          width: 100%;
+          min-height: 100px;
+          //border: 1px solid red;
+          display: flex;
+          flex-wrap: wrap;
+
+        }
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    cursor: pointer;
+    font-size: 60px;
+    font-family: $FONT;
+    top: -30px;
+    right: -60px;
+    color: whitesmoke;
+
+    &:active {
+      font-size: 55px;
+      font-family: $FONT;
+    }
+  }
+}

@@ -1,0 +1,186 @@
+@import "../../../main";
+
+$mainBackground: whitesmoke;
+
+.main {
+  position: absolute;
+  width: 320px;
+  height: 350px;
+  top: $headerheight - 5px;
+  border-radius: 7px;
+  background: $mainBackground;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 6px 8px 5px rgba(32, 32, 32, 0.281);
+
+  .title, .title1 {
+    width: 100%;
+    height: 40px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background: $contentDark;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > p {
+      font-size: 15px;
+      font-family: $FONT;
+      color: $mainBackground;
+      line-height: 30px;
+      margin: 0;
+    }
+  }
+
+  .title1 {
+    background: $contentColor;
+  }
+
+  .span, .span1 {
+    position: absolute;
+    left: 45%;
+    top: -10px;
+    transform: rotate(45deg);
+    width: 30px;
+    height: 30px;
+    z-index: 0;
+    background: $contentDark;
+  }
+
+  .span1 {
+    background: $contentColor;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    & > .product {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 1px;
+      border-bottom: 0.5px solid black;
+      display: flex;
+
+      .blockLeft {
+        width: 120px;
+        height: 100%;
+        padding: 5px;
+
+        img {
+          width: 100%;
+          height: 90px;
+          object-fit: cover;
+        }
+      }
+
+      .blockRight {
+        position: relative;
+        width: 190px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h6, p, span {
+          line-height: 22px;
+        }
+
+        h6 {
+          margin-top: 3px;
+          color: $contentDark;
+          font-size: 15px;
+          font-family: $FONT;
+        }
+
+        div {
+          width: 70%;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: flex-start;
+
+          p, span {
+            color: $textColorDark;
+            font-size: 15px;
+            font-family: $FONT;
+            margin: 0;
+          }
+
+          //justify-content: center;
+        }
+
+        svg {
+          cursor: pointer;
+          position: absolute;
+          font-size: 45px;
+          font-family: $FONT;
+          color: red;
+          right: 15px;
+          top: 25%;
+        }
+      }
+    }
+  }
+
+  .container1 {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    & > p {
+      color: rgb(152, 151, 151);
+    }
+  }
+
+  .footerBlock,
+  .footerBlock1 {
+    width: 100%;
+    height: 50px;
+    background: $contentDark;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      line-height: 20px;
+      color: white;
+      font-size: 17px;
+      font-family: $FONT;
+      padding: 0;
+      border-radius: 3px;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+      &:hover {
+        color: black;
+        border-bottom: 1px solid black;
+        background: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .footerBlock1 {
+    background: $contentColor;
+  }
+}
+
+.main1 {
+  display: none;
+}

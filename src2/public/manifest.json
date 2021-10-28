@@ -1,0 +1,32 @@
+{
+    "name":"Orderly",
+    "short_name":"Orderly",
+    "display":"standalone",
+    "icons":[
+        {
+            "src":"/ic-099/icons/icon-72x72.png",
+            "type":"image/png",
+            "sizes":"72x72"
+        },
+        {
+            "src":"/ic-099/icons/icon-96x96.png",
+            "type":"image/png",
+            "sizes":"96x96"
+        },
+        {
+            "src":"/ic-099/icons/icon-128x128.png",
+            "type":"image/png",
+            "sizes":"128x128"
+        },
+        {
+            "src":"/ic-099/icons/icon-144x144.png",
+            "type":"image/png",
+            "sizes":"144x144"
+        },
+        {
+            "src":"/ic-099/icons/icon-152x152.png",
+            "type":"image/png",
+            "sizes":"152x152"
+        }
+    ]
+}

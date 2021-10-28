@@ -1,0 +1,25 @@
+@import "../../../../main";
+.MuiSlider-track {
+  background: $contentDark !important;
+  height: 7px !important;
+}
+.MuiSlider-rail {
+  height: 7px !important;
+  background: $contentDark !important;
+  border-radius: 10px !important;
+}
+.MuiSlider-thumb {
+  width: 17px !important;
+  height: 17px !important;
+  background: whitesmoke !important;
+  border: 0.5px solid black !important;
+}
+.PrivateValueLabel-circle-9,PrivateValueLabel-circle-10{
+  margin-left: -1px !important;
+  margin-top: -7px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.MuiSlider-root{
+  color: $contentDark !important;
+}

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+
+
+
+/**********************************/
+/*********Footer menu*************/
+/********************************/
+.main{
+    position:relative;
+}
+.footer-menu{
+    background-color:var(--prm-clr);
+    position:fixed;
+    min-height:4.25rem;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.menu-buttons{
+    width:80%;
+}
+.menu-buttons img{
+    width:27px;
+}
+.menu-buttons .add{
+    color:#fff;
+    font-size:1.7rem;
+}
+
+
+/**********************************/
+/************Header***************/
+/********************************/
+header{
+    padding-top:3.5rem;
+}
+.logo{
+    width:35px;
+    height:35px;
+}
+
+
+/**********************************/
+/************Main*****************/
+/********************************/
+main{
+    margin-top:1.5rem;
+    background-color:#fff;
+}
